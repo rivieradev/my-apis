@@ -1,5 +1,5 @@
 import { Starwars } from "@/typing";
-import { getCommaSeparatedLinks } from "@/utils/helper";
+import { getCommaSeparatedLinks } from "@/app/utils/helper";
 
 interface IProps {
     data: (Starwars)[];

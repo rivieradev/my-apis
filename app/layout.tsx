@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Sidebar from './components/Sidebar'
+import Navbar from './components/Navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -27,9 +28,7 @@ export default function RootLayout({
         <main className="flex-1 flex flex-col overflow-hidden">
           {/* Navbar */}
           <nav className="bg-gradient-to-r from-indigo-800 to-teal-700 p-4">
-            <ul>
-              <li className="flex space-x-4 text-white">Navbar</li>
-            </ul>
+            <Navbar />
           </nav>
 
           {/* Page content */}

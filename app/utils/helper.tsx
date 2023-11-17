@@ -7,7 +7,7 @@ const getLink = (text :string, index: number | null) => {
     if (match) {
         const lastNumber = match[1];
         if (index !== null)
-            return <Link key={index} href={localApi} className="hover:underline hover:text-blue-600 transition duration-150 ease-out">{lastNumber}</Link>
+            return <Link key={index} href={localApi} className="pl-1 hover:underline hover:text-blue-600 transition duration-150 ease-out">{lastNumber}</Link>
         else
             return <Link href={localApi} className="hover:underline hover:text-blue-600 transition duration-150 ease-out">{lastNumber}</Link>
     }
