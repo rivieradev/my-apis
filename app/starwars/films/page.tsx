@@ -1,4 +1,4 @@
-import { FilmListResponse } from '@/typing';
+import { ApiResponse, Film } from '@/typing';
 import TableData from '@/app/components/TableData';
 
 async function getData() {
@@ -15,7 +15,7 @@ async function getData() {
 }
  
 export default async function Page() {
-  const data : FilmListResponse = await getData();
+  const data : ApiResponse<Film> = await getData();
  
   return (
     <section>

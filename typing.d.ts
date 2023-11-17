@@ -1,10 +1,10 @@
 export type Starwars = Person | Planet | Starship | Film | Vehicle | Species;
 
-export type PersonListResponse = {
+export type ApiResponse<T> = {
     count: number;
     next: string | null;
     previous: string | null;
-    results: Person[];
+    results: T[];
 };
 
 export type Person = {
@@ -42,14 +42,6 @@ export type Planet = {
     edited: string;
     url: string;
   };
-  
-  export type PlanetListResponse = {
-    count: number;
-    next: string | null;
-    previous: string | null;
-    results: Planet[];
-  };  
-
 
 export type Starship = {
   name: string;
@@ -71,20 +63,6 @@ export type Starship = {
   edited: string;
   url: string;
 }
-
-export type StarshipListResponse = {
-  count: number;
-  next: string | null;
-  previous: string | null;
-  results: Starship[];
-}
-
-export type FilmListResponse = {
-  count: number;
-  next: string | null;
-  previous: string | null;
-  results: Film[];
-};
 
 export type Film = {
   title: string;
@@ -122,14 +100,6 @@ export type Vehicle = {
   url: string;
 }
 
-export type VehicleListResponse = {
-  count: number;
-  next: string | null;
-  previous: string | null;
-  results: Vehicle[];
-}
-
-
 export type Species = {
   name: string;
   classification: string;
@@ -146,11 +116,4 @@ export type Species = {
   created: string;
   edited: string;
   url: string;
-}
-
-export type SpeciesListResponse = {
-  count: number;
-  next: string | null;
-  previous: string | null;
-  results: Species[];
 }

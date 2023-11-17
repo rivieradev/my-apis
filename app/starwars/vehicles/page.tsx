@@ -1,4 +1,4 @@
-import { VehicleListResponse } from '@/typing';
+import { ApiResponse, Vehicle } from '@/typing';
 import TableData from '@/app/components/TableData';
 
 async function getData() {
@@ -15,7 +15,7 @@ async function getData() {
 }
  
 export default async function Page() {
-  const data : VehicleListResponse = await getData();
+  const data : ApiResponse<Vehicle> = await getData();
  
   return (
     <section>

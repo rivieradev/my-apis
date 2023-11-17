@@ -1,4 +1,4 @@
-import { PlanetListResponse } from '@/typing';
+import { ApiResponse, Planet } from '@/typing';
 import TableData from '@/app/components/TableData';
 
 async function getData() {
@@ -15,7 +15,7 @@ async function getData() {
 }
  
 export default async function Page() {
-  const data : PlanetListResponse = await getData();
+  const data : ApiResponse<Planet> = await getData();
  
   return (
     <section>
