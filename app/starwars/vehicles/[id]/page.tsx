@@ -1,8 +1,8 @@
-import { Person } from "@/typing";
+import { Vehicle } from "@/typing";
 import FormData from "@/app/components/FormData";
 
 async function getData(id: string) {
-    const res = await fetch(`https://swapi.dev/api/people/${id}/`)
+    const res = await fetch(`https://swapi.dev/api/vehicles/${id}/`)
     // The return value is *not* serialized
     // You can return Date, Map, Set, etc.
 
@@ -16,7 +16,7 @@ async function getData(id: string) {
 
 export default async function Page({ params }: { params: { id: string } }) {
 
-    const data: Person = await getData(params.id);
+    const data: Vehicle = await getData(params.id);
 
     return (
         <section className="max-w-md mx-auto max-h-[40rem] p-5 overflow-y-auto">

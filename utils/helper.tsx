@@ -15,6 +15,8 @@ const getLink = (text :string, index: number | null) => {
 }
 
 export const getCommaSeparatedLinks = (text: string | string[]) => {
+    if (text === null)
+        return <></>;
     if (Array.isArray(text)) {
         return text.map((x, index) => getLink(x, index));
     } else if (!text.toString().includes('http')) {

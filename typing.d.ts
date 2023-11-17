@@ -1,4 +1,4 @@
-export type Starwars = Person | Planet | Starship | Film | Vehicle;
+export type Starwars = Person | Planet | Starship | Film | Vehicle | Species;
 
 export type PersonListResponse = {
     count: number;
@@ -127,4 +127,30 @@ export type VehicleListResponse = {
   next: string | null;
   previous: string | null;
   results: Vehicle[];
+}
+
+
+export type Species = {
+  name: string;
+  classification: string;
+  designation: string;
+  average_height: string;
+  skin_colors: string;
+  hair_colors: string;
+  eye_colors: string;
+  average_lifespan: string;
+  homeworld: string;
+  language: string;
+  people: string[];
+  films: string[];
+  created: string;
+  edited: string;
+  url: string;
+}
+
+export type SpeciesListResponse = {
+  count: number;
+  next: string | null;
+  previous: string | null;
+  results: Species[];
 }
