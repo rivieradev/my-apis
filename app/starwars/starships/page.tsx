@@ -2,7 +2,7 @@ import { ApiResponse, Starship } from '@/typing';
 import TableData from '@/app/components/TableData';
 
 async function getData() {
-  const res = await fetch('https://swapi.dev/api/starships')
+  const res = await fetch(`${process.env.STARWARS_API}/starships`)
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  

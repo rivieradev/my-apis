@@ -2,7 +2,7 @@ import { ApiResponse, Film } from '@/typing';
 import TableData from '@/app/components/TableData';
 
 async function getData() {
-  const res = await fetch('https://swapi.dev/api/films')
+  const res = await fetch(`${process.env.STARWARS_API}/films`)
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  

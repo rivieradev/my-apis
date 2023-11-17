@@ -2,7 +2,7 @@ import { Starship } from "@/typing";
 import FormData from "@/app/components/FormData";
 
 async function getData(id: string) {
-    const res = await fetch(`https://swapi.dev/api/starships/${id}/`)
+    const res = await fetch(`${process.env.STARWARS_API}/starships/${id}/`)
     // The return value is *not* serialized
     // You can return Date, Map, Set, etc.
 

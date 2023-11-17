@@ -1,7 +1,7 @@
 import Card from './Card';
 
 async function getData() {
-  const res = await fetch('https://swapi.dev/api/')
+  const res = await fetch(`${process.env.STARWARS_API}`)
   // The return value is *not* serialized
   // You can return Date, Map, Set, etc.
  
