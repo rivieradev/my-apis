@@ -1,8 +1,8 @@
-import { IPerson } from "@/typing";
+import { IPlanet } from "@/typing";
 import FormData from "@/app/components/FormData";
 
 async function getData(id: string) {
-    const res = await fetch(`https://swapi.dev/api/people/${id}/`)
+    const res = await fetch(`https://swapi.dev/api/planets/${id}/`)
     // The return value is *not* serialized
     // You can return Date, Map, Set, etc.
 
@@ -16,10 +16,10 @@ async function getData(id: string) {
 
 export default async function Page({ params }: { params: { id: string } }) {
 
-    const data: IPerson = await getData(params.id);
+    const data: IPlanet = await getData(params.id);
 
     return (
-        <section className="max-w-md mx-auto max-h-screen p-5 overflow-y-auto">
+        <section className="max-w-md mx-auto max-h-[40rem] p-5 overflow-y-auto">
             <FormData data={data} />
         </section>
     );

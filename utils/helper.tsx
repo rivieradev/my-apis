@@ -7,7 +7,7 @@ const getLink = (text :string, index: number | null) => {
     if (match) {
         const lastNumber = match[1];
         if (index !== null)
-            return <Link key={index} href={localApi} className="ml-2 hover:underline hover:text-blue-600 transition duration-150 ease-out">{lastNumber}</Link>
+            return <Link key={index} href={localApi} className="hover:underline hover:text-blue-600 transition duration-150 ease-out">{lastNumber}</Link>
         else
             return <Link href={localApi} className="hover:underline hover:text-blue-600 transition duration-150 ease-out">{lastNumber}</Link>
     }
@@ -15,10 +15,11 @@ const getLink = (text :string, index: number | null) => {
 }
 
 export const getCommaSeparatedLinks = (text: string | string[]) => {
-    const testArr = text as string[];
-     if (Array.isArray(testArr)) {
-        return (testArr as string[]).map((x, index) => getLink(x, index));
-      } else {
-        return getLink(testArr, null);
-      }
+    if (Array.isArray(text)) {
+        return text.map((x, index) => getLink(x, index));
+    } else if (!text.toString().includes('http')) {
+        return text;
+    } else {
+        return getLink(text, null);
+    }
 }
