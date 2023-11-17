@@ -1,4 +1,4 @@
-import { IPerson } from "@/typing";
+import { Person } from "@/typing";
 import FormData from "@/app/components/FormData";
 
 async function getData(id: string) {
@@ -16,7 +16,7 @@ async function getData(id: string) {
 
 export default async function Page({ params }: { params: { id: string } }) {
 
-    const data: IPerson = await getData(params.id);
+    const data: Person = await getData(params.id);
 
     return (
         <section className="max-w-md mx-auto max-h-screen p-5 overflow-y-auto">

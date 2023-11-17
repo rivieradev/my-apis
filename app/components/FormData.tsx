@@ -1,7 +1,7 @@
-import { IPerson, IPlanet, IStarship, IFilm } from "@/typing";
+import { Starwars } from "@/typing";
 
 interface IProps {
-    data: IPerson | IPlanet | IStarship | IFilm
+    data: Starwars
 }
 
 const FormData = ({ data } : IProps) => {

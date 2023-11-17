@@ -1,4 +1,4 @@
-import { IFilmListResponse } from '@/typing';
+import { FilmListResponse } from '@/typing';
 import TableData from '@/app/components/TableData';
 
 async function getData() {
@@ -15,7 +15,7 @@ async function getData() {
 }
  
 export default async function Page() {
-  const data : IFilmListResponse = await getData();
+  const data : FilmListResponse = await getData();
  
   return (
     <section>

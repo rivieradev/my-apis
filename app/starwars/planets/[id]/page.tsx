@@ -1,4 +1,4 @@
-import { IPlanet } from "@/typing";
+import { Planet } from "@/typing";
 import FormData from "@/app/components/FormData";
 
 async function getData(id: string) {
@@ -16,7 +16,7 @@ async function getData(id: string) {
 
 export default async function Page({ params }: { params: { id: string } }) {
 
-    const data: IPlanet = await getData(params.id);
+    const data: Planet = await getData(params.id);
 
     return (
         <section className="max-w-md mx-auto max-h-[40rem] p-5 overflow-y-auto">

@@ -1,11 +1,13 @@
-export interface IPersonListResponse {
+export type Starwars = Person | Planet | Starship | Film | Vehicle;
+
+export type PersonListResponse = {
     count: number;
     next: string | null;
     previous: string | null;
-    results: IPerson[];
+    results: Person[];
 };
 
-export interface IPerson {
+export type Person = {
     name: string;
     height: string; 
     mass: string;
@@ -24,7 +26,7 @@ export interface IPerson {
     url: string;
 };
 
-export interface IPlanet {
+export type Planet = {
     name: string;
     rotation_period: string;
     orbital_period: string;
@@ -41,15 +43,15 @@ export interface IPlanet {
     url: string;
   };
   
-  export interface IPlanetListResponse {
+  export type PlanetListResponse = {
     count: number;
     next: string | null;
     previous: string | null;
-    results: IPlanet[];
+    results: Planet[];
   };  
 
 
-export interface IStarship {
+export type Starship = {
   name: string;
   model: string;
   manufacturer: string;
@@ -70,21 +72,21 @@ export interface IStarship {
   url: string;
 }
 
-export interface IStarshipListResponse {
+export type StarshipListResponse = {
   count: number;
   next: string | null;
   previous: string | null;
-  results: IStarship[];
+  results: Starship[];
 }
 
-export interface IFilmListResponse {
+export type FilmListResponse = {
   count: number;
   next: string | null;
   previous: string | null;
-  results: IFilm[];
+  results: Film[];
 };
 
-export interface IFilm {
+export type Film = {
   title: string;
   episode_id: string;
   opening_crawl: string;
@@ -101,7 +103,7 @@ export interface IFilm {
   url: string;
 };
 
-export interface IVehicle {
+export type Vehicle = {
   name: string;
   model: string;
   manufacturer: string;
@@ -120,9 +122,9 @@ export interface IVehicle {
   url: string;
 }
 
-export interface IVehicleListResponse {
+export type VehicleListResponse = {
   count: number;
   next: string | null;
   previous: string | null;
-  results: IVehicle[];
+  results: Vehicle[];
 }

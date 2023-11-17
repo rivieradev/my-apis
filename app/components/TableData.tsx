@@ -1,8 +1,8 @@
-import { IPerson, IPlanet, IStarship, IFilm } from "@/typing";
+import { Starwars } from "@/typing";
 import { getCommaSeparatedLinks } from "@/utils/helper";
 
 interface IProps {
-    data: (IPerson | IPlanet | IStarship | IFilm)[];
+    data: (Starwars)[];
 }
 
 const TableData = ({ data }: IProps) => {
