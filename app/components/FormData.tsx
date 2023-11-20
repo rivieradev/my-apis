@@ -8,7 +8,7 @@ const FormData = ({ data } : IProps) => {
     const fieldNames: string[] = Object.keys(data);
 
     return (
-        <form className="p-6 bg-gray-100 shadow-md rounded-md">
+        <form className="p-6 bg-gray-100 shadow-md rounded-md grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {fieldNames.map((field, index) =>
                 <div key={index} className="mb-4">
                     <label className="block text-gray-700 text-sm font-bold mb-2 capitalize">{`${field.split('_').join(' ')}:`}</label>
