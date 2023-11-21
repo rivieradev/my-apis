@@ -18,12 +18,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-        <div className="flex h-screen bg-gray-100">
+        <body className="flex h-screen bg-gray-100">
         {/* Sidebar */}
-        <aside className="w-64 bg-gray-800 text-white p-4">
-          <Sidebar />
-        </aside>
-
+        <Sidebar />
         {/* Main content */}
         <main className="flex-1 flex flex-col overflow-hidden">
           {/* Navbar */}
@@ -36,7 +33,7 @@ export default function RootLayout({
             {children}
           </div>
         </main>
-      </div>
+      </body>
     </html>
   )
 }
